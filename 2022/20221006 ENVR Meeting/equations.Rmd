@@ -1,0 +1,84 @@
+---
+title: "Equations: Joint spatial modeling of relative activity and disease processes"
+date: "`r Sys.Date()`"
+output: pdf_document
+description: |
+  References accompanying poster
+---
+\newpage
+\thispagestyle{empty}
+
+\huge
+<!-- Let $\{y_1, \dots, y_n\}$ denote observed disease presence/absence at locations $\boldsymbol{s}$. Let $\boldsymbol{s^*}$ represent unobserved locations at which spatial predictions are desired. Then, -->
+\[
+\begin{split}
+y_i &\sim \text{Bernoulli}(\pi_i) \\
+\text{logit}(\pi_i) &= \alpha_0 + \eta_i \\
+\begin{bmatrix}
+\boldsymbol{\eta} \\ \boldsymbol{\eta^*}
+\end{bmatrix} &\sim 
+\mathcal{N}\left( 
+\begin{bmatrix}
+\boldsymbol{0} \\ \boldsymbol{0}
+\end{bmatrix}, 
+\begin{bmatrix}
+\boldsymbol{\Sigma}_{11} &  \boldsymbol{\Sigma}_{12} \\
+\boldsymbol{\Sigma}_{21} &  \boldsymbol{\Sigma}_{22}
+\end{bmatrix}
+\right)
+\end{split}
+\]
+
+\newpage
+\thispagestyle{empty}
+<!-- where  -->
+\[
+\begin{split}
+\Sigma_{11}^{(ij)} &= \sigma^2 K(\boldsymbol{s}_i, \boldsymbol{s}_j) = \sigma^2 \exp\left(-\frac{||\boldsymbol{s}_i - \boldsymbol{s}_j||^2}{2\phi^2}\right) \\
+\Sigma_{22}^{(ij)} &= \sigma^2 K(\boldsymbol{s}^*_i, \boldsymbol{s}^*_j) = \sigma^2 \exp\left(-\frac{||\boldsymbol{s}^*_i - \boldsymbol{s}^*_j||^2}{2\phi^2}\right) \\
+\Sigma_{12}^{(ij)} &= \sigma^2 K(\boldsymbol{s}_i, \boldsymbol{s}^*_j) = \sigma^2 \exp\left(-\frac{||\boldsymbol{s}_i - \boldsymbol{s}^*_j||^2}{2\phi^2}\right)
+\end{split}
+\]
+
+
+\newpage
+\thispagestyle{empty}
+
+<!-- Let $\{c_1, \dots, c_m\}$ denote observed activity at locations $\boldsymbol{s}^*$. Then, -->
+\[
+\begin{split}
+c_i &\sim \text{NB}(\xi, p_i) \\
+\text{logit}(p_i) &= \boldsymbol{x}_i^T\boldsymbol{\beta} + \alpha \eta_i^*
+\end{split}
+\]
+
+
+<!-- Note that by properties of multivariate normal random variables, -->
+\newpage
+\thispagestyle{empty}
+\[
+\boldsymbol{\eta}^* | \boldsymbol{\eta} \sim \mathcal{N}(\boldsymbol{\mu}_{2|1}, \boldsymbol{\Sigma}_{2|1})
+\]
+
+\newpage
+\thispagestyle{empty}
+<!-- where -->
+\[
+\begin{split}
+\boldsymbol{\Sigma}_{2|1} &= \boldsymbol{\Sigma}_{22} - \boldsymbol{\Sigma}_{21}\boldsymbol{\Sigma}^{-1}_{11}\boldsymbol{\Sigma}_{12} \\
+\boldsymbol{\mu}_{2|1} &= \boldsymbol{\Sigma}_{21} \boldsymbol{\Sigma}^{-1}_{11}\boldsymbol{\eta}
+\end{split}
+\]
+
+\newpage
+
+```{r, eval = F, echo = F}
+# split pdf
+npages = 6
+for(page in 2:npages){
+  pdftools::pdf_subset("equations.pdf", pages = page, output = paste0("pdfs/equations", page, ".pdf"))
+  knitr::plot_crop(paste0("pdfs/equations", page, ".pdf"))
+}
+
+# https://pdf2png.com/ to get .png
+```

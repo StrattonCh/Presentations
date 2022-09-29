@@ -1,0 +1,19 @@
+---
+title: "Joint spatial modeling of relative activity and disease processes"
+description: |
+  References accompanying poster
+author:
+  - name: Christian Stratton
+    affiliation: Montana State University
+    affiliation_url: https://math.montana.edu/
+  - name: Kathryn Irvine
+    affiliation: U.S. Geological Survey
+    affiliation_url: https://www.usgs.gov/centers/norock
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
