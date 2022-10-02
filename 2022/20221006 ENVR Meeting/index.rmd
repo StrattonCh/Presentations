@@ -1,7 +1,7 @@
 ---
 title: "Joint spatial modeling of relative activity and disease processes"
 description: |
-  References accompanying poster
+  Author affiliations, derivations, and references
 author:
   - name: Christian Stratton
     affiliation: Montana State University
@@ -9,7 +9,16 @@ author:
   - name: Kathryn Irvine
     affiliation: U.S. Geological Survey
     affiliation_url: https://www.usgs.gov/centers/norock
-date: "`r Sys.Date()`"
+  - name: Emily Almberg
+    affiliation: Bat Conservation International
+    affiliation_url: https://www.batcon.org/about-us/our-team/
+  - name: Kristina Smucker
+    affiliation: Montana Fish Wildlife and Parks
+    affiliation_url: https://directory.mt.gov/govt/state-dir/agency/fwp
+  - name: Justin Gude
+    affiliation: Montana Fish Wildlife and Parks
+    affiliation_url: https://directory.mt.gov/govt/state-dir/agency/fwp
+date: "Oct. 6, 2022"
 output: 
   distill::distill_article:
     self_contained: false
