@@ -86,6 +86,27 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
   <title>Joint spatial modeling of relative activity and disease processes</title>
@@ -114,15 +135,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="twitter:description" content="Author affiliations, derivations, and references"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=The No-U-Turn sampler: Adaptively setting path lengths in hamiltonian monte carlo;citation_publication_date=2014;citation_volume=15;citation_doi=10.5555/2627435.2638586;citation_author=Matthew D. Hoffman;citation_author=Andrew Gelman"/>
+  <meta name="citation_reference" content="citation_title=Fully bayesian inference for neural models with negative-binomial spiking;citation_publication_date=2012;citation_publisher=Curran Associates, Inc.;citation_volume=25;citation_author=Jonathan Pillow;citation_author=James Scott"/>
+  <meta name="citation_reference" content="citation_title=Bayesian inference for logistic models using Pólya–gamma latent variables;citation_publication_date=2013;citation_publisher=Taylor &amp; Francis;citation_volume=108;citation_doi=10.1080/01621459.2013.829001;citation_author=Nicholas G. Polson;citation_author=James G. Scott;citation_author=Jesse Windle"/>
+  <meta name="citation_reference" content="citation_title=Model selection and adaptation of hyperparameters;citation_publication_date=2006;citation_publisher=MIT Press;citation_author=Carl Edward Rasmussen;citation_author=Christopher K Williams"/>
+  <meta name="citation_reference" content="citation_title=Learning Hamiltonian Monte Carlo in R;citation_publication_date=2021;citation_publisher=Taylor &amp; Francis;citation_volume=75;citation_doi=10.1080/00031305.2020.1865198;citation_author=Samuel Thomas;citation_author=Wanzhu Tu"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Joint spatial modeling of relative activity and disease processes"]},{"type":"character","attributes":{},"value":["Author affiliations, derivations, and references\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Christian Stratton"]},{"type":"character","attributes":{},"value":["Montana State University"]},{"type":"character","attributes":{},"value":["https://math.montana.edu/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kathryn Irvine"]},{"type":"character","attributes":{},"value":["U.S. Geological Survey"]},{"type":"character","attributes":{},"value":["https://www.usgs.gov/centers/norock"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Emily Almberg"]},{"type":"character","attributes":{},"value":["Bat Conservation International"]},{"type":"character","attributes":{},"value":["https://www.batcon.org/about-us/our-team/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kristina Smucker"]},{"type":"character","attributes":{},"value":["Montana Fish Wildlife and Parks"]},{"type":"character","attributes":{},"value":["https://directory.mt.gov/govt/state-dir/agency/fwp"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Justin Gude"]},{"type":"character","attributes":{},"value":["Montana Fish Wildlife and Parks"]},{"type":"character","attributes":{},"value":["https://directory.mt.gov/govt/state-dir/agency/fwp"]}]}]},{"type":"character","attributes":{},"value":["Oct. 6, 2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","csl"]}},"value":[{"type":"character","attributes":{},"value":["Joint spatial modeling of relative activity and disease processes"]},{"type":"character","attributes":{},"value":["Author affiliations, derivations, and references\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Christian Stratton"]},{"type":"character","attributes":{},"value":["Montana State University"]},{"type":"character","attributes":{},"value":["https://math.montana.edu/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kathryn Irvine"]},{"type":"character","attributes":{},"value":["U.S. Geological Survey"]},{"type":"character","attributes":{},"value":["https://www.usgs.gov/centers/norock"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Emily Almberg"]},{"type":"character","attributes":{},"value":["Bat Conservation International"]},{"type":"character","attributes":{},"value":["https://www.batcon.org/about-us/our-team/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Kristina Smucker"]},{"type":"character","attributes":{},"value":["Montana Fish Wildlife and Parks"]},{"type":"character","attributes":{},"value":["https://directory.mt.gov/govt/state-dir/agency/fwp"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Justin Gude"]},{"type":"character","attributes":{},"value":["Montana Fish Wildlife and Parks"]},{"type":"character","attributes":{},"value":["https://directory.mt.gov/govt/state-dir/agency/fwp"]}]}]},{"type":"character","attributes":{},"value":["Oct. 6, 2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["biometrics_notes.csl"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["2022/20221004 DC Meeting/20221004_WNS_Impact.pptx","2022/20221004 DC Meeting/images/azure_bat.jpg","2022/20221004 DC Meeting/images/detections2020.png","2022/20221004 DC Meeting/images/detections2021.png","2022/20221004 DC Meeting/images/DSC_0069.JPG","2022/20221004 DC Meeting/images/DSC_0091.JPG","2022/20221004 DC Meeting/images/DSC_0098.JPG","2022/20221004 DC Meeting/images/guano_samples.jpg","2022/20221004 DC Meeting/images/image (1).png","2022/20221004 DC Meeting/images/IMG-0632.jpg","2022/20221004 DC Meeting/images/IMG-0640.jpg","2022/20221004 DC Meeting/images/nabatlogo.png","2022/20221004 DC Meeting/images/nabatlogo_text.png","2022/20221004 DC Meeting/images/pd_myse.jpg","2022/20221004 DC Meeting/images/pd_swab.jpg","2022/20221004 DC Meeting/images/pddetections2020.png","2022/20221004 DC Meeting/images/pddetections2021.png","2022/20221004 DC Meeting/images/Picture3.jpg","2022/20221004 DC Meeting/images/thumbnail_IMG-0510.jpg","2022/20221004 DC Meeting/images/thumbnail_IMG-0635.jpg","2022/20221004 DC Meeting/images/thumbnail_IMG-0641.jpg","2022/20221004 DC Meeting/images/USGS348_pc_whitetransp.wmf","2022/20221004 DC Meeting/images/USGSid_blacktransp.wmf","2022/20221004 DC Meeting/images/USGSid_greentransp.wmf","2022/20221004 DC Meeting/images/wnsspread2020.png","2022/20221004 DC Meeting/images/wnsspread2020_notext.png","2022/20221004 DC Meeting/images/wnsspread2022.png","2022/20221004 DC Meeting/images/wnsspread2022_notext.png","2022/20221006 ENVR Meeting/10062022_ENVR_Poster.pptx","2022/20221006 ENVR Meeting/equations.pdf","2022/20221006 ENVR Meeting/equations.Rmd","2022/20221006 ENVR Meeting/images/detections2020.png","2022/20221006 ENVR Meeting/images/detections2020_2021.png","2022/20221006 ENVR Meeting/images/detections2021.png","2022/20221006 ENVR Meeting/images/pddetections2020.png","2022/20221006 ENVR Meeting/images/pddetections2020_2021.png","2022/20221006 ENVR Meeting/images/pddetections2021.png","2022/20221006 ENVR Meeting/pdfs/equations2-1.png","2022/20221006 ENVR Meeting/pdfs/equations2.pdf","2022/20221006 ENVR Meeting/pdfs/equations3-1.png","2022/20221006 ENVR Meeting/pdfs/equations3.pdf","2022/20221006 ENVR Meeting/pdfs/equations4-1.png","2022/20221006 ENVR Meeting/pdfs/equations4.pdf","2022/20221006 ENVR Meeting/pdfs/equations5-1.png","2022/20221006 ENVR Meeting/pdfs/equations5.pdf","2022/20221006 ENVR Meeting/pdfs/equations6-1.png","2022/20221006 ENVR Meeting/pdfs/equations6.pdf","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.13/header-attrs.js","index_files/header-attrs-2.14/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","USGS Presentation Templates/USGS Presentation_Secondary_Slides_Template_16_9.png","USGS Presentation Templates/USGS_Presentation_Title Slide_Template_16_9.png","USGS Presentation Templates/USGS348_pc_whitetransp.wmf","USGS Presentation Templates/USGSid_blacktransp.wmf","USGS Presentation Templates/USGSid_greentransp.wmf"]}
+  {"type":"character","attributes":{},"value":["2022/20221004 DC Meeting/20221004_WNS_Impact.pptx","2022/20221004 DC Meeting/images/azure_bat.jpg","2022/20221004 DC Meeting/images/detections2020.png","2022/20221004 DC Meeting/images/detections2021.png","2022/20221004 DC Meeting/images/DSC_0069.JPG","2022/20221004 DC Meeting/images/DSC_0091.JPG","2022/20221004 DC Meeting/images/DSC_0098.JPG","2022/20221004 DC Meeting/images/guano_samples.jpg","2022/20221004 DC Meeting/images/image (1).png","2022/20221004 DC Meeting/images/IMG-0632.jpg","2022/20221004 DC Meeting/images/IMG-0640.jpg","2022/20221004 DC Meeting/images/nabatlogo.png","2022/20221004 DC Meeting/images/nabatlogo_text.png","2022/20221004 DC Meeting/images/pd_myse.jpg","2022/20221004 DC Meeting/images/pd_swab.jpg","2022/20221004 DC Meeting/images/pddetections2020.png","2022/20221004 DC Meeting/images/pddetections2021.png","2022/20221004 DC Meeting/images/Picture3.jpg","2022/20221004 DC Meeting/images/thumbnail_IMG-0510.jpg","2022/20221004 DC Meeting/images/thumbnail_IMG-0635.jpg","2022/20221004 DC Meeting/images/thumbnail_IMG-0641.jpg","2022/20221004 DC Meeting/images/USGS348_pc_whitetransp.wmf","2022/20221004 DC Meeting/images/USGSid_blacktransp.wmf","2022/20221004 DC Meeting/images/USGSid_greentransp.wmf","2022/20221004 DC Meeting/images/wnsspread2020.png","2022/20221004 DC Meeting/images/wnsspread2020_notext.png","2022/20221004 DC Meeting/images/wnsspread2022.png","2022/20221004 DC Meeting/images/wnsspread2022_notext.png","2022/20221006 ENVR Meeting/10062022_ENVR_Poster.pptx","2022/20221006 ENVR Meeting/equations.pdf","2022/20221006 ENVR Meeting/equations.Rmd","2022/20221006 ENVR Meeting/images/detections2020.png","2022/20221006 ENVR Meeting/images/detections2020_2021.png","2022/20221006 ENVR Meeting/images/detections2021.png","2022/20221006 ENVR Meeting/images/pddetections2020.png","2022/20221006 ENVR Meeting/images/pddetections2020_2021.png","2022/20221006 ENVR Meeting/images/pddetections2021.png","2022/20221006 ENVR Meeting/pdfs/equations2-1.png","2022/20221006 ENVR Meeting/pdfs/equations2.pdf","2022/20221006 ENVR Meeting/pdfs/equations3-1.png","2022/20221006 ENVR Meeting/pdfs/equations3.pdf","2022/20221006 ENVR Meeting/pdfs/equations4-1.png","2022/20221006 ENVR Meeting/pdfs/equations4.pdf","2022/20221006 ENVR Meeting/pdfs/equations5-1.png","2022/20221006 ENVR Meeting/pdfs/equations5.pdf","2022/20221006 ENVR Meeting/pdfs/equations6-1.png","2022/20221006 ENVR Meeting/pdfs/equations6.pdf","biometrics_notes.csl","combo_2021.png","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.13/header-attrs.js","index_files/header-attrs-2.14/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","references.bib","USGS Presentation Templates/USGS Presentation_Secondary_Slides_Template_16_9.png","USGS Presentation Templates/USGS_Presentation_Title Slide_Template_16_9.png","USGS Presentation Templates/USGS348_pc_whitetransp.wmf","USGS Presentation Templates/USGSid_blacktransp.wmf","USGS Presentation Templates/USGSid_greentransp.wmf"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1472,7 +1499,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="index_files/header-attrs-2.13/header-attrs.js"></script>
+  <script src="index_files/header-attrs-2.14/header-attrs.js"></script>
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1534,8 +1561,327 @@ class="uri">https://directory.mt.gov/govt/state-dir/agency/fwp</a>
 </div>
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#sampling-model" id="toc-sampling-model">Sampling model</a>
+<ul>
+<li><a href="#spatial-disease-process"
+id="toc-spatial-disease-process">Spatial disease process</a></li>
+<li><a href="#observed-activity-data"
+id="toc-observed-activity-data">Observed activity data</a></li>
+<li><a href="#example-data" id="toc-example-data">Example data</a></li>
+</ul></li>
+<li><a href="#derivations" id="toc-derivations">Derivations</a>
+<ul>
+<li><a href="#polya-gamma-data-augmentation"
+id="toc-polya-gamma-data-augmentation">Polya-gamma data
+augmentation</a></li>
+<li><a href="#sampling-boldsymbolomegay"
+id="toc-sampling-boldsymbolomegay">Sampling <span
+class="math inline">\(\boldsymbol{\omega}^{(y)}\)</span></a></li>
+<li><a href="#sampling-alpha_0" id="toc-sampling-alpha_0">Sampling <span
+class="math inline">\(\alpha_0\)</span></a></li>
+<li><a href="#sampling-boldsymboleta"
+id="toc-sampling-boldsymboleta">Sampling <span
+class="math inline">\(\boldsymbol{\eta}\)</span></a></li>
+<li><a href="#sampling-sigma2" id="toc-sampling-sigma2">Sampling <span
+class="math inline">\(\sigma^2\)</span></a></li>
+<li><a href="#sampling-phi2" id="toc-sampling-phi2">Sampling <span
+class="math inline">\(\phi^2\)</span></a></li>
+<li><a href="#sampling-boldsymbolomegac"
+id="toc-sampling-boldsymbolomegac">Sampling <span
+class="math inline">\(\boldsymbol{\omega}^{(c)}\)</span></a></li>
+<li><a href="#sampling-boldsymboleta-1"
+id="toc-sampling-boldsymboleta-1">Sampling <span
+class="math inline">\(\boldsymbol{\eta}^*\)</span></a></li>
+<li><a href="#sampling-alpha" id="toc-sampling-alpha">Sampling <span
+class="math inline">\(\alpha\)</span></a></li>
+<li><a href="#sampling-boldsymbolbeta"
+id="toc-sampling-boldsymbolbeta">Sampling <span
+class="math inline">\(\boldsymbol{\beta}\)</span></a></li>
+<li><a href="#sampling-xi" id="toc-sampling-xi">Sampling <span
+class="math inline">\(\xi\)</span></a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h1 id="sampling-model">Sampling model</h1>
+<h2 id="spatial-disease-process">Spatial disease process</h2>
+<p>Let <span class="math inline">\(\{y_1, \dots, y_n\}\)</span> denote
+observed disease presence/absence at locations <span
+class="math inline">\(\boldsymbol{s}\)</span>. Let <span
+class="math inline">\(\boldsymbol{s^*}\)</span> represent unobserved
+locations at which spatial predictions are desired. Then, <span
+class="math display">\[
+\begin{split}
+y_i &amp;\sim \text{Bernoulli}(\pi_i) \\
+\text{logit}(\pi_i) &amp;= \alpha_0 + \eta_i \\
+\begin{bmatrix}
+\boldsymbol{\eta} \\ \boldsymbol{\eta^*}
+\end{bmatrix} &amp;\sim
+\mathcal{N}\left(
+\begin{bmatrix}
+\boldsymbol{0} \\ \boldsymbol{0}
+\end{bmatrix},
+\begin{bmatrix}
+\boldsymbol{\Sigma}_{11} &amp;  \boldsymbol{\Sigma}_{12} \\
+\boldsymbol{\Sigma}_{21} &amp;  \boldsymbol{\Sigma}_{22}
+\end{bmatrix}
+\right)
+\end{split}
+\]</span> where <span class="math display">\[
+\begin{split}
+\Sigma_{11}^{(ij)} &amp;= \sigma^2 K(\boldsymbol{s}_i, \boldsymbol{s}_j)
+= \sigma^2 \exp\left(-\frac{||\boldsymbol{s}_i -
+\boldsymbol{s}_j||^2}{2\phi^2}\right) \\
+\Sigma_{22}^{(ij)} &amp;= \sigma^2 K(\boldsymbol{s}^*_i,
+\boldsymbol{s}^*_j) = \sigma^2 \exp\left(-\frac{||\boldsymbol{s}^*_i -
+\boldsymbol{s}^*_j||^2}{2\phi^2}\right) \\
+\Sigma_{12}^{(ij)} &amp;= \sigma^2 K(\boldsymbol{s}_i,
+\boldsymbol{s}^*_j) = \sigma^2 \exp\left(-\frac{||\boldsymbol{s}_i -
+\boldsymbol{s}^*_j||^2}{2\phi^2}\right)
+\end{split}
+\]</span></p>
+<h2 id="observed-activity-data">Observed activity data</h2>
+<p>Let <span class="math inline">\(\{c_1, \dots, c_m\}\)</span> denote
+observed activity at locations <span
+class="math inline">\(\boldsymbol{s}^*\)</span>. Then, <span
+class="math display">\[
+\begin{split}
+c_i &amp;\sim \text{NB}(\xi, p_i) \\
+\text{logit}(p_i) &amp;= \boldsymbol{x}_i^T\boldsymbol{\beta} + \alpha
+\eta_i^*
+\end{split}
+\]</span> Note that by properties of multivariate normal random
+variables, <span class="math display">\[
+\boldsymbol{\eta}^* | \boldsymbol{\eta} \sim
+\mathcal{N}(\boldsymbol{\mu}_{2|1}, \boldsymbol{\Sigma}_{2|1})
+\]</span> where <span class="math display">\[
+\begin{split}
+\boldsymbol{\Sigma}_{2|1} &amp;= \boldsymbol{\Sigma}_{22} -
+\boldsymbol{\Sigma}_{21}\boldsymbol{\Sigma}^{-1}_{11}\boldsymbol{\Sigma}_{12}
+\\
+\boldsymbol{\mu}_{2|1} &amp;= \boldsymbol{\Sigma}_{21}
+\boldsymbol{\Sigma}^{-1}_{11}\boldsymbol{\eta}
+\end{split}
+\]</span></p>
+<h2 id="example-data">Example data</h2>
+<figure>
+<img src="combo_2021.png"
+alt="Observed data on bat activity and Pd spread (2021)." />
+<figcaption aria-hidden="true">Observed data on bat activity and Pd
+spread (2021).</figcaption>
+</figure>
+<h1 id="derivations">Derivations</h1>
+<p>Where possible, we exploit data augmentation strategies to afford
+Gibbs draws. Otherwise, we implement the NUTS algorithm <span
+class="citation" data-cites="hoffman2014">(<a href="#ref-hoffman2014"
+role="doc-biblioref">Hoffman and Gelman, 2014</a>)</span> to take
+Hamiltonian Monte Carlo draws from posterior distributions.</p>
+<h2 id="polya-gamma-data-augmentation">Polya-gamma data
+augmentation</h2>
+<p>For binomial and negative binomial sampling models, we implement the
+Polya-gamma data augmentation strategy of <span class="citation"
+data-cites="polson2013">Polson, Scott and Windle (<a
+href="#ref-polson2013" role="doc-biblioref">2013</a>)</span>. This
+strategy introduces auxiliary Polya-gamma distributed random variables
+to each likelihood to afford conditionally Gaussian posterior
+distributions, allowing for Gibbs draws of regression coefficients. This
+data augmentation is relevant for sampling <span
+class="math inline">\(\alpha_0\)</span>, <span
+class="math inline">\(\boldsymbol{\eta}\)</span>, and <span
+class="math inline">\(\boldsymbol{\eta}^*\)</span>.</p>
+<h2 id="sampling-boldsymbolomegay">Sampling <span
+class="math inline">\(\boldsymbol{\omega}^{(y)}\)</span></h2>
+<p>Let <span class="math inline">\(\omega^{(y)}_i \sim \text{PG}(1,
+0)\)</span>. Then, <span class="math display">\[
+z_i = \frac{1}{\omega_i}\left(y_i - \frac{1}{2}\right) \sim
+\mathcal{N}\left(\alpha_0 + \eta_i, \frac{1}{\omega_i} \right).
+\]</span> See <span class="citation" data-cites="polson2013">Polson et
+al. (<a href="#ref-polson2013" role="doc-biblioref">2013</a>)</span> for
+more detail. Equivalently, let <span
+class="math inline">\(\boldsymbol{\Omega}_{(y)} = \text{diag}(\omega_1,
+\dots, \omega_n)\)</span>. Then, <span class="math display">\[
+\boldsymbol{z} \sim \mathcal{N}\left(\alpha_0 \boldsymbol{1} +
+\boldsymbol{\eta}, \boldsymbol{\Omega}_{(y)}^{-1}\right)
+\]</span> From <span class="citation" data-cites="polson2013">Polson et
+al. (<a href="#ref-polson2013" role="doc-biblioref">2013</a>)</span>,
+the full conditional distribution of <span
+class="math inline">\(\omega_i\)</span> is <span class="math display">\[
+\begin{split}
+\omega_i | \cdot \sim \text{PG}(1, \alpha_0 + \eta_i)
+\end{split}
+\]</span></p>
+<h2 id="sampling-alpha_0">Sampling <span
+class="math inline">\(\alpha_0\)</span></h2>
+<p>Let <span class="math inline">\(\alpha_0 \sim N(\mu_0,
+\sigma_0^2)\)</span> and <span class="math inline">\(\boldsymbol{z}^* =
+\boldsymbol{z} - \boldsymbol{\eta}\)</span>. Then, <span
+class="math display">\[
+\begin{split}
+\alpha_0 | \cdot &amp;\sim \mathcal{N}(m, V) \\
+V &amp;= \left(tr(\boldsymbol{\Omega}_{(y)}) +
+\frac{1}{\sigma_0^2}\right)^{-1} \\
+m &amp;= V \left(\boldsymbol{\omega} \cdot \boldsymbol{z}^* +
+\frac{\mu_0}{\sigma_0^2} \right)
+\end{split}
+\]</span></p>
+<p>Proof:</p>
+<h2 id="sampling-boldsymboleta">Sampling <span
+class="math inline">\(\boldsymbol{\eta}\)</span></h2>
+<p>Let <span class="math inline">\(\boldsymbol{z}^* = \boldsymbol{z} -
+\boldsymbol{\eta}\)</span>. Then, <span class="math display">\[
+\begin{split}
+\boldsymbol{\eta} | \cdot &amp;\sim \mathcal{N}(\boldsymbol{m},
+\boldsymbol{V}) \\
+\boldsymbol{V} &amp;= \left(\boldsymbol{\Omega}_{(y)} +
+\boldsymbol{\Sigma}^{-1}_{11}\right)^{-1} \\
+\boldsymbol{m} &amp;= \boldsymbol{V} \left(\boldsymbol{\Omega}_{(y)}
+\boldsymbol{z}^*\right)
+\end{split}
+\]</span></p>
+<h2 id="sampling-sigma2">Sampling <span
+class="math inline">\(\sigma^2\)</span></h2>
+<p>Let <span class="math inline">\(\sigma^2 \sim \text{IG}(a_0,
+b_0)\)</span>. Then, <span class="math display">\[
+\begin{split}
+\sigma^2 | \cdot &amp;\sim \text{IG}(a, b) \\
+a &amp;= a_0 + \frac{n}{2} \\
+b &amp;= b_0 + \frac{1}{2} \boldsymbol{\eta}^T K(\boldsymbol{s},
+\boldsymbol{s}&#39;) \boldsymbol{\eta}
+\end{split}
+\]</span></p>
+<h2 id="sampling-phi2">Sampling <span
+class="math inline">\(\phi^2\)</span></h2>
+<h3 id="hmc-and-jacobian-transformation">HMC and Jacobian
+transformation</h3>
+<p>Since no conjugate distribution is known for <span
+class="math inline">\(\phi^2\)</span>, we sample this parameter with
+HMC, which requires the log-posterior and gradient of the log-posterior
+up to proportionality. Additionally, HMC requires proposals across all
+real numbers <span class="citation" data-cites="thomas2021">(<a
+href="#ref-thomas2021" role="doc-biblioref">Thomas and Tu,
+2021</a>)</span>. Let <span class="math inline">\(\phi^2 \sim
+\text{IG}(c, d)\)</span>. Following <span class="citation"
+data-cites="thomas2021">Thomas and Tu (<a href="#ref-thomas2021"
+role="doc-biblioref">2021</a>)</span>, we apply a Jacobian
+transformation to find the distribution of <span
+class="math inline">\(\gamma = g(\phi^2) = \ln \phi^2\)</span>. <span
+class="math display">\[
+\begin{split}
+p(\gamma | a, b) &amp;= p_{\phi^2}(g^{-1}(\gamma)) \left|\frac{d
+\phi^2}{d \gamma} \right| \\
+&amp;= \frac{b^a}{\Gamma(a)} \left(e^\gamma\right)^{-a - 1} \exp\left(
+-\frac{b}{e^\gamma}\right) e^\gamma \\
+&amp;= \frac{b^a}{\Gamma(a)} e^{-a\gamma}\exp\left(
+-\frac{b}{e^\gamma}\right) \\
+&amp;\propto e^{-a \gamma} \exp\left( -\frac{b}{e^\gamma}\right)
+\end{split}
+\]</span> and <span class="math inline">\(\ln p(\gamma | a, b) \propto
+-a\gamma - be^{-\gamma}\)</span>.</p>
+<h3 id="closed-forms-for-sampling">Closed forms for sampling</h3>
+<p>The log-posterior and gradient of the log-posterior are given in
+terms of <span class="math inline">\(\gamma\)</span>. First recall that
+<span class="math display">\[
+\Sigma_{11}^{(ij)} = \sigma^2 K(\boldsymbol{s}_i, \boldsymbol{s}_j) =
+\sigma^2 \exp\left(-\frac{||\boldsymbol{s}_i -
+\boldsymbol{s}_j||^2}{2\phi^2}\right) = \sigma^2
+\exp\left(-\frac{||\boldsymbol{s}_i -
+\boldsymbol{s}_j||^2}{2e^\gamma}\right)
+\]</span> Then, <span class="math display">\[
+\begin{split}
+\ln p(\gamma | \cdot) &amp;\propto p(\boldsymbol{\eta} | \cdot)
+p(\gamma) \\
+&amp;\propto -\frac{1}{2} \ln|\boldsymbol{\Sigma}_{11}| - \frac{1}{2}
+\boldsymbol{\eta}^T \boldsymbol{\Sigma}^{-1}_{11} \boldsymbol{\eta}
+-a\gamma - be^{-\gamma} \\
+\nabla_\gamma  \ln p(\gamma | \cdot) &amp;\propto
+\frac{1}{2}\text{tr}\left(\left[\boldsymbol{\Sigma}^{-1}_{11}
+\boldsymbol{\eta} \boldsymbol{\eta}^T \boldsymbol{\Sigma}^{-1}_{11} -
+\boldsymbol{\Sigma}^{-1}_{11}\right] \frac{\partial
+\boldsymbol{\Sigma}^{-1}_{11}}{\partial \gamma}\right) - a + b
+e^{-\gamma}
+\end{split}
+\]</span> where the last line follows from page 114 of <span
+class="citation" data-cites="rasmussen2006">Rasmussen and Williams (<a
+href="#ref-rasmussen2006" role="doc-biblioref">2006</a>)</span>.</p>
+<h2 id="sampling-boldsymbolomegac">Sampling <span
+class="math inline">\(\boldsymbol{\omega}^{(c)}\)</span></h2>
+<p>We again leverage the Polya-gamma data augmetation strategy of <span
+class="citation" data-cites="polson2013">Polson et al. (<a
+href="#ref-polson2013" role="doc-biblioref">2013</a>)</span> for the
+negative binomial counts. See <span class="citation"
+data-cites="pillow2012">Pillow and Scott (<a href="#ref-pillow2012"
+role="doc-biblioref">2012</a>)</span> for example.</p>
+<p>Let <span class="math inline">\(\omega^{(c)}_i \sim \text{PG}(1,
+0)\)</span>. Then, <span class="math display">\[
+z_i = \frac{1}{2\omega^{(c)}_i}\left(c_i - \xi\right) \sim
+\mathcal{N}\left(\boldsymbol{x}_i^T \boldsymbol{\beta} + \eta_i^*\alpha,
+\frac{1}{\omega_i} \right).
+\]</span> Equivalently, let <span
+class="math inline">\(\boldsymbol{\Omega}_{(c)} =
+\text{diag}(\omega^{(c)}_1, \dots, \omega^{(c)}_m)\)</span>. Then, <span
+class="math display">\[
+\boldsymbol{z} \sim \mathcal{N}\left(\boldsymbol{X}\boldsymbol{\beta} +
+\boldsymbol{\eta}^* \alpha, \boldsymbol{\Omega}_{(c)}^{-1}\right)
+\]</span> From <span class="citation" data-cites="pillow2012">Pillow and
+Scott (<a href="#ref-pillow2012" role="doc-biblioref">2012</a>)</span>,
+the full conditional distribution of <span
+class="math inline">\(\omega^{(c)}_i\)</span> is <span
+class="math display">\[
+\begin{split}
+\omega^{(c)}_i | \cdot \sim \text{PG}(c_i + \xi, \boldsymbol{x}_i^T
+\boldsymbol{\beta} + \eta_i^*\alpha)
+\end{split}
+\]</span></p>
+<h2 id="sampling-boldsymboleta-1">Sampling <span
+class="math inline">\(\boldsymbol{\eta}^*\)</span></h2>
+<h2 id="sampling-alpha">Sampling <span
+class="math inline">\(\alpha\)</span></h2>
+<h2 id="sampling-boldsymbolbeta">Sampling <span
+class="math inline">\(\boldsymbol{\beta}\)</span></h2>
+<h2 id="sampling-xi">Sampling <span
+class="math inline">\(\xi\)</span></h2>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-hoffman2014" class="csl-entry" role="doc-biblioentry">
+Hoffman, M.D. and Gelman, A. (2014) <a
+href="https://doi.org/10.5555/2627435.2638586">The
+<span>No-U-Turn</span> sampler: Adaptively setting path lengths in
+hamiltonian monte carlo</a>. <em>Journal of Machine Learning
+Research</em>, <strong>15</strong>, 1593–1623.
+</div>
+<div id="ref-pillow2012" class="csl-entry" role="doc-biblioentry">
+Pillow, J. and Scott, J. (2012) <a
+href="https://proceedings.neurips.cc/paper/2012/file/b55ec28c52d5f6205684a473a2193564-Paper.pdf">Fully
+bayesian inference for neural models with negative-binomial spiking</a>.
+<em>Advances in neural information processing systems</em> (eds F.
+Pereira), C.J. Burges), L. Bottou), &amp; K.Q. Weinberger), p. Curran
+Associates, Inc.
+</div>
+<div id="ref-polson2013" class="csl-entry" role="doc-biblioentry">
+Polson, N.G., Scott, J.G. and Windle, J. (2013) <a
+href="https://doi.org/10.1080/01621459.2013.829001">Bayesian inference
+for logistic models using <span class="nocase">Pólya–gamma</span> latent
+variables</a>. <em>Journal of the American Statistical Association</em>,
+<strong>108</strong>, 1339–1349.
+</div>
+<div id="ref-rasmussen2006" class="csl-entry" role="doc-biblioentry">
+Rasmussen, C.E. and Williams, C.K. (2006) Model selection and adaptation
+of hyperparameters. <em>Gaussian processes for machine learning</em> MIT
+Press.
+</div>
+<div id="ref-thomas2021" class="csl-entry" role="doc-biblioentry">
+Thomas, S. and Tu, W. (2021) <a
+href="https://doi.org/10.1080/00031305.2020.1865198"><span
+class="nocase">Learning Hamiltonian Monte Carlo in R</span></a>. <em>The
+American Statistician</em>, <strong>75</strong>, 403–413.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1543,11 +1889,23 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
