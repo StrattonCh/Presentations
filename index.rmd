@@ -170,7 +170,7 @@ The log-posterior and gradient of the log-posterior are given in terms of $\gamm
 Then,
 \[
 \begin{split}
-\ln p(\gamma | \cdot) &\propto p(\boldsymbol{\eta} | \cdot) p(\gamma) \\
+\ln p(\gamma | \cdot) &\propto \ln p(\boldsymbol{\eta} | \cdot) + \ln p(\gamma) \\
 &\propto -\frac{1}{2} \ln|\boldsymbol{\Sigma}_{11}| - \frac{1}{2} \boldsymbol{\eta}^T \boldsymbol{\Sigma}^{-1}_{11} \boldsymbol{\eta} -a\gamma - be^{-\gamma} \\
 \nabla_\gamma  \ln p(\gamma | \cdot) &\propto \frac{1}{2}\text{tr}\left(\left[\boldsymbol{\Sigma}^{-1}_{11} \boldsymbol{\eta} \boldsymbol{\eta}^T \boldsymbol{\Sigma}^{-1}_{11} - \boldsymbol{\Sigma}^{-1}_{11}\right] \frac{\partial \boldsymbol{\Sigma}^{-1}_{11}}{\partial \gamma}\right) - a + b e^{-\gamma}
 \end{split} 
@@ -187,7 +187,7 @@ z_i = \frac{1}{2\omega^{(c)}_i}\left(c_i - \xi\right) \sim \mathcal{N}\left(\bol
 \]
 Equivalently, let $\boldsymbol{\Omega}_{(c)} = \text{diag}(\omega^{(c)}_1, \dots, \omega^{(c)}_m)$. Then,
 \[
-\boldsymbol{z} \sim \mathcal{N}\left(\boldsymbol{X}\boldsymbol{\beta} + \boldsymbol{\eta}^* \alpha, \boldsymbol{\Omega}_{(c)}^{-1}\right)
+\boldsymbol{z}_{(c)} \sim \mathcal{N}\left(\boldsymbol{X}\boldsymbol{\beta} + \boldsymbol{\eta}^* \alpha, \boldsymbol{\Omega}_{(c)}^{-1}\right)
 \]
 From @pillow2012, the full conditional distribution of $\omega^{(c)}_i$ is
 \[
@@ -198,9 +198,90 @@ From @pillow2012, the full conditional distribution of $\omega^{(c)}_i$ is
 
 ## Sampling $\boldsymbol{\eta}^*$
 
+Recall that 
+\[
+\boldsymbol{\eta}^* | \boldsymbol{\eta} \sim \mathcal{N}(\boldsymbol{\mu}_{2|1}, \boldsymbol{\Sigma}_{2|1})
+\]
+where
+\[
+\begin{split}
+\boldsymbol{\Sigma}_{2|1} &= \boldsymbol{\Sigma}_{22} - \boldsymbol{\Sigma}_{21}\boldsymbol{\Sigma}^{-1}_{11}\boldsymbol{\Sigma}_{12} \\
+\boldsymbol{\mu}_{2|1} &= \boldsymbol{\Sigma}_{21} \boldsymbol{\Sigma}^{-1}_{11}\boldsymbol{\eta}
+\end{split}
+\]
+Then,
+\[
+\begin{split}
+\boldsymbol{\eta}^* | \cdot &\sim \mathcal{N}(\boldsymbol{m}, \boldsymbol{V}) \\
+\boldsymbol{V} &= \left(\alpha^2 \boldsymbol{\Omega}_{(c)} + \boldsymbol{\Sigma}^{-1}_{2|1}\right)^{-1} \\
+\boldsymbol{m} &= \boldsymbol{V}
+\left(\alpha\boldsymbol{\Omega}_{(c)} (\boldsymbol{z}_{(c)} - \boldsymbol{X}\boldsymbol{\beta}) + \boldsymbol{\Sigma}_{2|1} \boldsymbol{\mu}_{2|1} \right)
+\end{split}
+\]
+
 ## Sampling $\alpha$
+
+Let $\alpha \sim N(\mu_{0, \alpha}, \sigma_{0, \alpha}^2)$. Then,
+\[
+\begin{split}
+\alpha | \cdot &\sim N(m, V) \\
+V &= \left(\boldsymbol{\eta}^* \boldsymbol{\Omega}_{(c)} \boldsymbol{\eta}^* + \frac{1}{\sigma_{0, \alpha}^2}\right) \\
+m &= V \left(\boldsymbol{\eta}^* \boldsymbol{\Omega}_{(c)} (\boldsymbol{z}_{(c)} - \boldsymbol{X}\boldsymbol{\beta}) + \frac{\mu_{0, \alpha}}{\sigma_{0, \alpha}^2}\right)
+\end{split}
+\]
 
 ## Sampling $\boldsymbol{\beta}$
 
+Let $\boldsymbol{\beta} \sim \mathcal{N}(\boldsymbol{\mu}_{0, \beta}, \boldsymbol{\Sigma}_{0, \beta})$. Then,
+\[
+\begin{split}
+\boldsymbol{\beta} | \cdot &\sim \mathcal{N}(\boldsymbol{m}, \boldsymbol{V}) \\
+\boldsymbol{V} &= \left(\boldsymbol{X}^T \boldsymbol{\Omega}_{(c)} \boldsymbol{X} +  \boldsymbol{\Sigma}^{-1}_{0, \beta}\right)^{-1} \\
+\boldsymbol{m} &= \boldsymbol{V} \left(\boldsymbol{X}^T \boldsymbol{\Omega}_{(c)} (\boldsymbol{z}_{(c)} - \alpha \boldsymbol{\eta}^*) + \boldsymbol{\Sigma}^{-1}_{0, \beta}\boldsymbol{\mu}_{0, \beta} \right)
+\end{split}
+\]
+
 ## Sampling $\xi$
+
+### HMC and Jacobian transformation
+
+One option for sampling from $p(\xi | \cdot)$ is to again use HMC. Following the same argument as above, we let $\xi \sim \text{IG}(a, b)$ and $\zeta = \ln \xi$. Then,
+\[
+p(\zeta | a, b) = e^{-a\zeta}\exp \left(-\frac{b}{e^{\zeta}}\right)
+\]
+and $\ln p(\zeta | a, b) = -a\zeta - b e^{-\zeta}$.
+
+### Closed forms for sampling
+
+The log-posterior and gradient of the log-posterior are given in terms of $\zeta$. Let $\text{logit}(p_i) = \boldsymbol{x}_i^T \boldsymbol{\beta} + \alpha \eta_i^*$ First, consider the contribution of observation $i$ to the log posterior:
+\[
+\begin{split}
+\mathcal{L}_i (c_i | \cdot) &= \ln\left( \frac{\Gamma(c_i + \exp(\zeta))}{\Gamma(c_i + 1)\Gamma(\exp(\zeta))} \right) + \exp(\zeta) \ln(1 - p_i) + c_i \ln(p_i) \\
+&\propto \ln \Gamma(c_i + \exp(\zeta)) - \ln\Gamma(\exp(\zeta)) + \exp(\zeta) \ln(1 - p_i) + c_i \ln(p_i)
+\end{split}
+\]
+Therefore, 
+\[
+\begin{split}
+\ln p(\zeta | \cdot) &\propto \ln p(\boldsymbol{c} | \cdot) + \ln p(\zeta) \\
+&\propto  -a\zeta - b e^{-\zeta} + \sum_{i=1}^m \mathcal{L}_i (c_i | \cdot) 
+\end{split}
+\]
+To calculate the gradient, consider the gradient of the contribution of observation $i$ to the log posterior:
+\[
+\begin{split}
+\nabla_\zeta \mathcal{L}_i (c_i | \cdot) &=  \psi(c_i + \exp(\zeta)) - \psi(\exp(\zeta)) + \exp(\zeta) \ln(1 - p_i) 
+\end{split}
+\]
+where $\psi(x)$ is the digamma function. Therefore,
+\[
+\begin{split}
+\nabla_\zeta \ln p(\zeta | \cdot) &\propto \nabla_\zeta\ln p(\boldsymbol{c} | \cdot) + \nabla_\zeta\ln p(\zeta) \\
+&\propto  -a\zeta - b e^{-\zeta} + \sum_{i=1}^m \nabla_\zeta \mathcal{L}_i (c_i | \cdot) 
+\end{split}
+\]
+
+### Gibbs sampling via data augmentation
+
+Alternatively, samples from $p(\xi | \cdot)$ may be drawn via the data augmentation strategy described by @zhou2012.
 
